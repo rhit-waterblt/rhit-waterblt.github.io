@@ -13,7 +13,7 @@ export const Resume = () => {
   }
 
     return (
-      <div style={{justifyContent: "center"}}>
+      <div style={{justifyContent: "center"}} className="resume">
         <ScaleFade initialScale={0.9} in={isOpen}>
           <Document className={"resume"} file={ResumePDF} onLoadSuccess={onDocumentLoadSuccess}>
             <Page pageNumber={1}/>

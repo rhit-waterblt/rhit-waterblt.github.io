@@ -1,0 +1,11 @@
+.header-tab {
+    color: black;
+    margin: 0 5px;
+}
+
+.header-tab :hover {
+    color: black;
+    margin: "0 5px";
+    transform: scale(1.5);
+    font-weight: 60;
+}
