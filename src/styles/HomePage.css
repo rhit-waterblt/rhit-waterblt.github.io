@@ -47,6 +47,14 @@
     align-items: center;
 }
 
+#home div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: large;
+    color: crimson;
+}
+
 #home h1{
     color: aliceblue;
     size: 16em;
