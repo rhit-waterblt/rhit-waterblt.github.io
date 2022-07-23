@@ -1,4 +1,4 @@
-#homepageTopPhoto > img {
+/* #homepageTopPhoto > img {
     position: absolute;
     left: 1000;
     top: 550;
@@ -33,34 +33,30 @@
     -o-background-size: cover;
     background-size: cover;
     z-index: -1;
-}
+} */
 
 #home {
     position: absolute;
     left: 0;
-    top: -0;
+    top: 0;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     z-index: -1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#home div {
+/* #home div {
     position: absolute;
     left: 0;
     top: 0;
     font-size: large;
     color: crimson;
-}
+} */
 
-#home h1{
-    color: aliceblue;
-    size: 16em;
-}
-
-#home img {
+#firstHomeBackground {
     position: absolute;
     left: 0;
     top: 0;
@@ -68,4 +64,69 @@
     object-fit: cover;
     height: 100%;
     z-index: -1;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    padding: 100px;
+}
+
+/* section > * {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+#selfPortrait {
+    /* position: absolute; */
+    border-radius: 50%;
+    border: 5px solid #000000;
+    /* left: 10px;
+    top: 10px; */
+    /* height: 50%; */
+    /* width: 30%; */
+    /* object-fit: cover; */
+    /* margin-bottom: 100px; */
+    /* margin-top: 100px; */
+    margin: auto 0;
+}
+
+#sectionOne {
+    z-index: -1;
+    background-color:bisque;
+}
+
+#sectionTwo {
+    z-index: -1;
+    background-color:cornflowerblue;
+}
+
+#sectionThree {
+    z-index: -1;
+    background-color: aquamarine;
+}
+
+#sectionFour {
+    z-index: -1;
+    background-color:coral;
+}
+
+#sectionFive {
+    z-index: -1;
+    background-color:indianred;
+}
+
+#sectionSix {
+    z-index: -1;
+    background-color:lightpink;
+}
+
+.headerText {
+    color: white;
+    font-size: 2em;
+    text-align: center;
 }
