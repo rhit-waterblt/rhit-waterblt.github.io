@@ -2,8 +2,8 @@ import { Header } from 'LayoutComponents/Header/Header';
 import { InProgress } from 'NotificationComponents/InProgress';
 import { HomePage } from 'PageComponents/HomePage/HomePage';
 import { Resume } from 'PageComponents/Resume/Resume';
-import React, { useState, useEffect} from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useState, useEffect} from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './styles/App.css';
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App"> 
         <Header>
         </Header>
         <Routes>
@@ -32,7 +32,7 @@ function App() {
           <Route path="/portfolio" element={<InProgress/>}/>
           <Route path="/aboutMe" element={<InProgress/>}/>
           <Route path="/currentProjects" element={<InProgress/>}/>
-        </Routes>
+        </Routes> 
     </div>
   );
 }

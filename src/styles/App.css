@@ -8,7 +8,6 @@
   justify-content: center;
   /* overflow: hidden; */
   /* display: flex; */
-  /* height: 300vh; */
   /* background: url("https://img2.storyblok.com/4098x1200/smart/filters:format(jpeg)/f/53624/4096x1280/04c6a60e17/green-mountains-of-glencoe-in-the-scottish-highlands.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -29,9 +28,9 @@
 
 .App-header {
   background-color: #282c34;
-  /* position: absolute; */
-  left: 0;
-  top: 0;
+  position: relative;
+  /* left: 0;
+  top: 0; */
   background-color: transparent;
   min-height: 55px;
   display: flex;
@@ -40,7 +39,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  z-index: 100;
+  z-index: 2000;
 }
 
 /* .App-link {

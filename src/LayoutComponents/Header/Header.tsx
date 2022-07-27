@@ -1,11 +1,10 @@
-import React from "react";
+import { ReactNode } from "react";
 import { Tabs, TabList, Tab } from '@chakra-ui/react'
-import { HeaderDrawer } from "./HeaderDrawer"
 import { Link } from "react-router-dom";
 import "../../styles/Header.css"
 
 interface IProps {
-
+  children?: ReactNode
 }
 
 
@@ -16,7 +15,6 @@ export const Header = (props: IProps) => {
     <div className="App-header">
         <Tabs variant='soft-rounded' align="end">
           <TabList>
-            {/* <HeaderDrawer/> */}
             <Link to="/"><Tab className={"header-tab"}>Home</Tab></Link>
             <Link to="/contactMe"><Tab className={"header-tab"} >Contact Me</Tab></Link>
             <Link to="/resume"><Tab className={"header-tab"} >Resume</Tab></Link>

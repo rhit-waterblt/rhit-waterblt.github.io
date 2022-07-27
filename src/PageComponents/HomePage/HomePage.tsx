@@ -1,21 +1,32 @@
-import { StackDivider, VStack, Grid, GridItem, flexbox } from '@chakra-ui/react'
-import { Column } from 'LayoutComponents/Helpers/Columns'
-import { Row } from 'LayoutComponents/Helpers/Row'
-import { useLayoutEffect, useRef } from 'react'
+import { Grid, GridItem } from '@chakra-ui/react'
+import { useEffect, useLayoutEffect, useRef } from 'react'
 import '../../styles/HomePage.css'
 import { Avatar } from './Avatar'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+gsap.registerPlugin(ScrollTrigger)
 
 interface IProps {
     scrollPosition: number,
 }
 
 export const HomePage = (props: IProps) => {
+    const selfPortraitRef = useRef<HTMLImageElement>(null);
+
+    useEffect(() => {
+        if (selfPortraitRef.current) {
+            gsap.to(selfPortraitRef.current, {
+                rotation: 360,
+                delay: .15,
+                duration: 3
+            });
+        }
+    }, []);
 
     return (
-        <div id="home">
+        <div id="home"> 
             <TestBlock scrollPosition={props.scrollPosition}/>
-            {/* <img src="https://img.freepik.com/premium-photo/modern-black-office-desk-with-office-supplies-copy-space-presentation-background_67155-21518.jpg" alt="uh oh there's supposed to be an image here" /> */}
             <section id='sectionOne'>
                 <Grid
                     h='75vh'
@@ -27,13 +38,12 @@ export const HomePage = (props: IProps) => {
                         <h1 className='headerText'>Liam Waterbury - A Developing Developer</h1>
                     </GridItem>
                     <GridItem style={{display: "flex", alignContent: "center"}} rowSpan={2} colSpan={1} bg='lightgray'>
-                        <Avatar /> 
+                        <Avatar ref={selfPortraitRef} /> 
                     </GridItem>
                     <GridItem style={{display: "flex", justifyContent: "center"}} rowSpan={1} bg='green' >
                         <h1 className='headerText'>Full-Stack Software Engineering</h1>
                     </GridItem>
                 </Grid>
-                {/* <img id="firstHomeBackground" src="https://img2.storyblok.com/4098x1200/smart/filters:format(jpeg)/f/53624/4096x1280/04c6a60e17/green-mountains-of-glencoe-in-the-scottish-highlands.jpg" alt="uh oh there's supposed to be an image here" /> */}
             </section>
             <section id="sectionTwo">
                 <Grid
