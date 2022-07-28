@@ -67,6 +67,8 @@ section {
     width: 100%;
     height: 110vh;
     padding: 100px;
+    position: flex;
+    align-items: center;
 }
 
 /* section > * {
@@ -92,7 +94,7 @@ section {
 }
 
 #sectionOne {
-    background-color:bisque;
+    background-color:lightgrey;
 }
 
 #sectionTwo {
@@ -113,10 +115,40 @@ section {
 
 #sectionSix {
     background-color:lightpink;
+    height: 50vh;
+}
+
+#nameText {
+    color: white;
+    font-size: 5vw;
+    text-align: center;
+    font-family: 'Acme', sans-serif;
 }
 
 .headerText {
     color: white;
-    font-size: 2em;
+    font-size: 3vw;
     text-align: center;
+    font-family: 'Acme', sans-serif;
+}
+
+p {
+    color: white;
+    font-family: 'Acme', sans-serif;
+    margin: 5px;
+    font-size: 1.2vw;
+}
+
+.sectionHeader {
+    position: absolute;
+    top: 15px;
+    color: white;
+    font-family: 'Acme', sans-serif;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.grid {
+    margin-top: 4vh;
+    /* margin-bottom: auto; */
 }

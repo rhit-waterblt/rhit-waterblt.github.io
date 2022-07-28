@@ -48,15 +48,16 @@
 
 .react-pdf__Page__canvas {
   margin: auto auto;
-  /* height: 80vw !important; */
+  /* width: 60% !important;
+  height: 60% !important; */
   filter: brightness(120%);
    filter: contrast(120%);
    filter: drop-shadow(10px 10px 10px grey);
 }
 
-.resume {
+/* .resume {
   margin-top: 30px;
-}
+} */
 
 /* @keyframes App-logo-spin {
   from {
