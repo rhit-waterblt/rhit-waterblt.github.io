@@ -4,7 +4,7 @@ import { HomePage } from 'PageComponents/HomePage/HomePage';
 import { Resume } from 'PageComponents/Resume/Resume';
 import { useState, useEffect} from 'react';
 import { Route, Routes } from 'react-router-dom';
-import './styles/App.css';
+import './styles/App.scss';
 
 function App() {
   //TODO move scroll stuff to homepage

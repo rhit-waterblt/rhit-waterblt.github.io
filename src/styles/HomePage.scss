@@ -43,6 +43,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient( #DECBA4, #3E5151);
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center; 
 }
 
 /* #home div {
@@ -69,6 +73,7 @@ section {
     padding: 100px;
     position: flex;
     align-items: center;
+    scroll-snap-align: start;
 }
 
 /* section > * {
@@ -93,28 +98,28 @@ section {
     margin: auto 0;
 }
 
-#sectionOne {
-    background-color:lightgrey;
-}
+// #sectionOne {
+//     background-color:lightgrey;
+// }
 
-#sectionTwo {
-    background-color:cornflowerblue;
-}
+// #sectionTwo {
+//     background-color:cornflowerblue;
+// }
 
-#sectionThree {
-    background-color: aquamarine;
-}
+// #sectionThree {
+//     background-color: aquamarine;
+// }
 
-#sectionFour {
-    background-color:coral;
-}
+// #sectionFour {
+//     background-color:coral;
+// }
 
-#sectionFive {
-    background-color:indianred;
-}
+// #sectionFive {
+//     background-color:indianred;
+// }
 
 #sectionSix {
-    background-color:lightpink;
+    // background-color:lightpink;
     height: 50vh;
 }
 
@@ -132,7 +137,22 @@ section {
     font-family: 'Acme', sans-serif;
 }
 
-p {
+.subTitleText {
+    color: white;
+    font-size: 4vw;
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+    z-index: 1000000;
+}
+
+.grid :hover {
+    .subTitleText {
+        color: #753BBD !important;
+        font-size: 4.1vw !important;
+    }
+}
+
+#aboutMeText {
     color: white;
     font-family: 'Acme', sans-serif;
     margin: 5px;

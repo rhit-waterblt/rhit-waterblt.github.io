@@ -1,6 +1,7 @@
 import { Grid, GridItem } from '@chakra-ui/react'
 import { useEffect, useLayoutEffect, useRef } from 'react'
-import '../../styles/HomePage.css'
+import '../../styles/HomePage.scss'
+import '../../styles/Cards.scss'
 import soccerPhoto from '../../resources/images/liamSoccer.png'
 import { Avatar } from './Avatar'
 import { gsap } from 'gsap'
@@ -77,7 +78,7 @@ export const HomePage = (props: IProps) => {
 
     return (
         <div id="home"> 
-            <TestBlock scrollPosition={props.scrollPosition}/>
+            {/* <TestBlock scrollPosition={props.scrollPosition}/> */}
             <section id='sectionOne'>
                 <Grid
                     className='grid'
@@ -110,7 +111,7 @@ export const HomePage = (props: IProps) => {
                         <img ref={soccerImageRef} src={soccerPhoto} alt="uh oh" />
                     </GridItem>
                     <GridItem  colStart={4} rowSpan={3} colSpan={3} >
-                        <p style={{marginLeft: "25px"}}>
+                        <p id="aboutMeText" style={{marginLeft: "25px"}}>
                             I'm a software engineering major studying at Rose-Hulman Institute of Technology. I've always had a passion for building things, as such I initially pursued a major in Civil Engineering. However, I found myself 
                             spending my free time building applications instead of physical buildings. The freedom and the lack of limits kickstarted my passion for coding and software engineering.
                             <br/>
@@ -137,13 +138,49 @@ export const HomePage = (props: IProps) => {
                     templateColumns='repeat(3, 1fr)'
                     gap={4}
                 >
-                    <GridItem colSpan={3} rowSpan={1} bg={"green"}>
+                    <GridItem colSpan={3} rowSpan={1} style={{justifyContent: "center"}}>
+                        <a id="practicalExperience" className="subTitleText" href="/porfolio" >
+                            Learn more about my practical experience
+                        </a>
                     </GridItem>    
-                    <GridItem colSpan={1} rowSpan={1} bg={"red"}>
-                    </GridItem>   
-                    <GridItem colSpan={1} rowSpan={1} bg={"red"}>
+                    <GridItem colSpan={1} rowSpan={1} display={"flex"} style={{justifyContent: "center"}}>
+                        <a href="/portfolio" className="data-card">
+                            <h3>16-Bit Accumulator Processor</h3>
+                            <h4>Verilog</h4>
+                            <p>Designed a processor to calculate relative primes of numbers. Includes a completely instruction set for additional mathematic calculations.</p>
+                            <span className="link-text">
+                            Learn More
+                            <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z" fill="#753BBD"/>
+                            </svg>
+                            </span>
+                        </a>
+                    </GridItem>
+                    <GridItem colSpan={1} rowSpan={1} display={"flex"} style={{justifyContent: "center"}}>
+                        <a href="/portfolio" className="data-card">
+                            <h3>Soccer Statistic SQL Database</h3>
+                            <h4>MSSQL</h4>
+                            <p>Created indices, stored procedures, and checks to ensure security and integrity of a SQL database. Included a fully fledged Java frontend.</p>
+                            <span className="link-text">
+                            Learn More
+                            <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z" fill="#753BBD"/>
+                            </svg>
+                            </span>
+                        </a>
                     </GridItem>  
-                    <GridItem colSpan={1} rowSpan={1} bg={"red"}>
+                    <GridItem colSpan={1} rowSpan={1} display={"flex"} style={{justifyContent: "center"}}>
+                        <a href="/portfolio" className="data-card">
+                            <h3>Indexed AVL Tree</h3>
+                            <h4>Java</h4>
+                            <p>Created an indexed AVL Self Balancing tree data structure. Ensures O(logN) for inserting, removing, and selecting.</p>
+                            <span className="link-text">
+                            Learn More
+                            <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z" fill="#753BBD"/>
+                            </svg>
+                            </span>
+                        </a>
                     </GridItem>   
                 </Grid>
             </section>
@@ -156,14 +193,37 @@ export const HomePage = (props: IProps) => {
                     templateColumns='repeat(2, 1fr)'
                     gap={4}
                 >
-                    <GridItem colSpan={3} rowSpan={1} bg={"green"}>
+                    <GridItem colSpan={3} rowSpan={1} display={"flex"} style={{justifyContent: "center"}}>
+                        <a className="subTitleText" href="/currentProjects">
+                            What am I working on now?
+                        </a>
                     </GridItem>    
-                    <GridItem colSpan={1} rowSpan={2} bg={"red"}>
+                    <GridItem colSpan={1} rowSpan={2} display={"flex"} style={{justifyContent: "right"}}>
+                        <a href="/currentProjects" className="data-card">
+                            <h3>Web/Mobile App</h3>
+                            <h4>Full-Stack</h4>
+                            <p>A marketplace-esc app that I hope to release to public within 2 years</p>
+                            <span className="link-text">
+                            Learn More
+                            <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z" fill="#753BBD"/>
+                            </svg>
+                            </span>
+                        </a>
                     </GridItem>   
-                    <GridItem colSpan={1} rowSpan={2} bg={"red"}>
+                    <GridItem colSpan={1} rowSpan={2} display={"flex"} style={{justifyContent: "left"}}>
+                        <a href="/currentProjects" className="data-card">
+                            <h3>Computer Vision</h3>
+                            <h4>OpenCV</h4>
+                            <p>I got my start with CV at Telemetry Sports and continue to research and learn about CV and pytorch/tensorflow models</p>
+                            <span className="link-text">
+                                Learn More
+                            <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z" fill="#753BBD"/>
+                            </svg>
+                            </span>
+                        </a>
                     </GridItem>  
-                    <GridItem colSpan={1} rowSpan={2} bg={"red"}>
-                    </GridItem>   
                 </Grid>
             </section>
             <section id="sectionFive">
@@ -175,9 +235,8 @@ export const HomePage = (props: IProps) => {
                     templateColumns='repeat(1, 1fr)'
                     gap={4}
                 >
-                    <GridItem  bg={"green"}>
+                    <GridItem>
                         <Resume/>
-                        Download
                     </GridItem>    
                 </Grid>
             </section>
@@ -189,7 +248,7 @@ export const HomePage = (props: IProps) => {
                     templateRows='repeat(1, 1fr)'
                     templateColumns='repeat(1, 1fr)'
                 >
-                    <GridItem  bg={"green"}>
+                    <GridItem>
                         <Links/>
                     </GridItem>    
                 </Grid>

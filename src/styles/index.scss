@@ -1,11 +1,13 @@
-body {
+body, html {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  scroll-snap-type: proximity;
+  scroll-snap-points-y: repeat(110vh);
+  scroll-snap-type: y proximity;
 }
 
 code {
@@ -14,5 +16,8 @@ code {
 }
 
 #root {
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
 }
