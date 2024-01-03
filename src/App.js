@@ -7,11 +7,13 @@ import Resume from './components/Resume';
 import Blog from './components/Blog';
 import ProjectPage from './components/ProjectPage';
 import ProjectDetail from './components/ProjectDetails';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<MainPage />} />
