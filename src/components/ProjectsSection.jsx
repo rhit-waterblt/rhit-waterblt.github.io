@@ -1,6 +1,7 @@
 import React from 'react';
-import { Box, SimpleGrid, Text, Button, Link as ChakraLink } from '@chakra-ui/react';
+import { Box, SimpleGrid, Text, Button } from '@chakra-ui/react';
 import { projectCardInfo } from '../constants/ProjectCardInfo';
+import { Link } from 'react-router-dom';
 import ProjectCard from './ProjectCard';
 
 const projects = projectCardInfo.slice(0, 3);
@@ -20,7 +21,7 @@ const ProjectsSection = () => {
         transform: 'translateY(-2px)',
         boxShadow: 'lg',
       }}>
-        <ChakraLink href="/projects" _hover={{ textDecoration: 'none' }}>View All Projects</ChakraLink>
+        <Link href="/projects" _hover={{ textDecoration: 'none' }}>View All Projects</Link>
       </Button>
     </Box>
   );

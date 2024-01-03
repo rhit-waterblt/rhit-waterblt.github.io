@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Image, Heading, Text, Link as ChakraLink } from '@chakra-ui/react';
+import { Box, Image, Heading, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 
 const cardVariants = {
     hidden: { opacity: 0 },
@@ -35,9 +36,9 @@ const ProjectCard = ({ id, title, description, imageUrl, useInViewFlag = true })
                 <Box p={5}>
                     <Heading size="md" mb={2}>{title}</Heading>
                     <Text mb={4}>{description}</Text>
-                    <ChakraLink href={`/projects/${id}`} color={accentColor}>
+                    <Link href={`/projects/${id}`} color={accentColor}>
                         Learn More
-                    </ChakraLink>
+                    </Link>
                 </Box>
             </Box>
         </motion.div>
