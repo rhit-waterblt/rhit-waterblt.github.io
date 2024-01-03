@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, SimpleGrid, Text, Button, Link as ChakraLink } from '@chakra-ui/react';
+import { Box, SimpleGrid, Text } from '@chakra-ui/react';
 import { projectCardInfo } from '../constants/ProjectCardInfo';
 import ProjectCard from './ProjectCard';
 import BubbleSection from './BubbleSection';
@@ -18,12 +18,6 @@ const ProjectPage = () => {
                         <ProjectCard key={project.id} {...project} useInViewFlag={false} />
                     ))}
                 </SimpleGrid>
-                <Button mt={8} colorScheme="teal" _hover={{
-                    transform: 'translateY(-2px)',
-                    boxShadow: 'lg',
-                }}>
-                    <ChakraLink href="/projects" _hover={{ textDecoration: 'none' }}>View All Projects</ChakraLink>
-                </Button>
             </Box>
         </BubbleSection>
     );

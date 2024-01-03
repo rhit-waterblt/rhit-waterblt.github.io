@@ -17,12 +17,14 @@ const ProjectsSection = () => {
           <ProjectCard key={project.id} {...project} />
         ))}
       </SimpleGrid>
-      <Button mt={8} colorScheme="teal" _hover={{
-        transform: 'translateY(-2px)',
-        boxShadow: 'lg',
-      }}>
-        <Link to="/projects" _hover={{ textDecoration: 'none' }}>View All Projects</Link>
-      </Button>
+      <Link to="/projects">
+        <Button mt={8} colorScheme="teal" _hover={{
+          transform: 'translateY(-2px)',
+          boxShadow: 'lg',
+        }}>
+          View All Projects
+        </Button>
+      </Link>
     </Box>
   );
 };
