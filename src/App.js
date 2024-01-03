@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/Header';
 import MainPage from './components/MainPage';
 import ContactFooter from './components/ContactFooter';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Resume from './components/Resume';
 import Blog from './components/Blog';
 import ProjectPage from './components/ProjectPage';
