@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Text, VStack, CircularProgress, CircularProgressLabel, HStack, Heading, Button, Link } from '@chakra-ui/react';
+import { Box, Text, VStack, CircularProgress, CircularProgressLabel, HStack, Heading, Button } from '@chakra-ui/react';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const skills = [
   { name: 'Java', level: 95 },
@@ -67,7 +68,7 @@ const SkillsSection = () => {
                 Download Resume
               </Button>
             </a>
-            <Link href='/resume'>
+            <Link to='/resume'>
               <Button colorScheme="teal" variant="outline" mt={2} _hover={{
                 transform: 'translateY(-2px)',
                 boxShadow: 'lg',

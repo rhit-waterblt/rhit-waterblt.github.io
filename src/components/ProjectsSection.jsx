@@ -21,7 +21,7 @@ const ProjectsSection = () => {
         transform: 'translateY(-2px)',
         boxShadow: 'lg',
       }}>
-        <Link href="/projects" _hover={{ textDecoration: 'none' }}>View All Projects</Link>
+        <Link to="/projects" _hover={{ textDecoration: 'none' }}>View All Projects</Link>
       </Button>
     </Box>
   );

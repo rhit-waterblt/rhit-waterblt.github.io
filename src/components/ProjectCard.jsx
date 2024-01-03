@@ -36,7 +36,7 @@ const ProjectCard = ({ id, title, description, imageUrl, useInViewFlag = true })
                 <Box p={5}>
                     <Heading size="md" mb={2}>{title}</Heading>
                     <Text mb={4}>{description}</Text>
-                    <Link href={`/projects/${id}`} color={accentColor}>
+                    <Link to={`/projects/${id}`} color={accentColor}>
                         Learn More
                     </Link>
                 </Box>
